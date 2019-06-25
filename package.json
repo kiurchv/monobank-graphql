@@ -1,0 +1,35 @@
+{
+  "name": "monobank-graphql",
+  "version": "0.1.0",
+  "description": "GraphQL wrapper around Monobank API",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node lib/server.js",
+    "build": "tsc",
+    "test": "jest",
+    "dev": "npm run build -- --watch & nodemon lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiurchv/monobank-graphql.git"
+  },
+  "author": "Myroslav Kiurchev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kiurchv/monobank-graphql/issues"
+  },
+  "homepage": "https://github.com/kiurchv/monobank-graphql#readme",
+  "devDependencies": {
+    "@types/graphql": "^14.2.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "apollo-server": "^2.6.4",
+    "class-transformer": "^0.2.3",
+    "graphql": "^14.3.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^0.17.4"
+  }
+}
