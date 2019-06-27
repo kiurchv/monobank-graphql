@@ -4,6 +4,8 @@ import { buildSchema } from "type-graphql";
 
 import * as resolvers from "./resolvers";
 
+const BYPASS_HEADERS = ["x-token"];
+
 async function bootstrap() {
   // build TypeGraphQL executable schema
   const schema = await buildSchema({
@@ -14,7 +16,12 @@ async function bootstrap() {
   const server = new ApolloServer({
     schema,
     // enable GraphQL Playground
-    playground: true
+    playground: true,
+    context: ({ req }) => ({
+      headers: Object.fromEntries(
+        Object.entries(req.headers).filter(([key]) => BYPASS_HEADERS.includes(key))
+      )
+    })
   });
 
   // Start the server
