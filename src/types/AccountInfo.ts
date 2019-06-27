@@ -1,6 +1,7 @@
 import { Field, ID, Int, ObjectType } from "type-graphql";
 
 import { CashbackType } from "./CashbackType";
+import { StatementItem } from "./StatementItem";
 
 @ObjectType()
 export class AccountInfo {
@@ -20,4 +21,7 @@ export class AccountInfo {
 
   @Field(type => CashbackType)
   cashbackType: CashbackType;
+
+  @Field(type => [StatementItem])
+  statement: StatementItem[];
 }

@@ -12,3 +12,12 @@ export async function fetchUserInfo(headers: HeadersInit): Promise<object> {
   return result.json();
 }
 
+export async function fetchStatementItems(
+  { account, from, to },
+  headers: HeadersInit
+): Promise<object[]> {
+  const url = [API_BASE, "/personal/statement", account, from, to].filter(Boolean).join("/");
+
+  const result = await fetch(url, { headers })
+  return result.json();
+}
