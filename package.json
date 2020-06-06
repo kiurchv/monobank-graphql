@@ -27,7 +27,7 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "apollo-server": "^2.6.4",
+    "apollo-server": "^2.14.2",
     "class-transformer": "^0.2.3",
     "graphql": "^14.3.1",
     "node-fetch": "^2.6.0",
