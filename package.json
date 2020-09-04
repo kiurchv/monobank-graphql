@@ -32,6 +32,6 @@
     "graphql": "^14.3.1",
     "node-fetch": "^2.6.0",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^0.17.4"
+    "type-graphql": "^0.17.6"
   }
 }
